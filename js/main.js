@@ -2,10 +2,18 @@ function validateForm() {
   let task = document.getElementById("task").value;
   let date = document.getElementById("date").value;
   let time = document.getElementById("time").value;
-  if (task == "" && date == "" && time == "") {
-    alert("please fill all form fields");
+  if (task == "") {
+    alert("please enter a task");
     return false;
-  } else {
+  } 
+   else if (date == "") {
+    alert("please enter a date");
+    return false;
+  }  else if ( time == "") {
+    alert("please enter time ");
+    return false;
+  } 
+  else {
     addData();
   }
 }
