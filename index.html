@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body onload="showData();">
+    <header id="myDIV" class="header">
+      <h2>My todolist</h2>
+      <form id="myform ">
+        <input type="text" placeholder="Title..." id="task" required />
+        <input type="date" id="date" required />
+        <input type="time" id="time" required />
+        <input
+          type="submit"
+          onclick="validateForm();"
+          class="addBtn"
+          value="Add"
+        />
+        <input
+          type="button"
+          onclick="deleteData();"
+          class="delBtn"
+          value="Delete"
+        />
+      </form>
+    </header>
+    <main>
+      <table id="myTable">
+        <thead >
+          <th>task</th>
+          <th>date</th>
+          <th>time</th>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </main>
+    <footer>
+      <h2>made by @botanicalCoder</h2>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
